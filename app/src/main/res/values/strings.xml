@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Kriptokolik</string>
+    <string name="button_Giris">Giriş yap!</string>
+    <string name="text_Kayit">Eğer hesabınız yok ise kayıt olmak için tıklayınız.</string>
 </resources>

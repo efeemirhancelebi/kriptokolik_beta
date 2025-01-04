@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coin_ekleme_ekrani"
+    android:background="@color/material_dark_gray">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/coinName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:textSize="40sp"
+            android:text="Coin Adı"
+            tools:layout_editor_absoluteX="179dp"
+            tools:layout_editor_absoluteY="94dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/gotham_bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="131dp"
+            android:layout_marginBottom="25dp">
+
+            <Button
+                android:id="@+id/duzenlemeButonu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ekleme Modu Aktif"
+                tools:layout_editor_absoluteX="210dp"
+                tools:layout_editor_absoluteY="122dp"
+                android:fontFamily="@font/gotham_medium"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/miktar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/edit_text_design"
+            android:ems="10"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:padding="8dp"
+            android:text="Toplam USD"
+            android:textColor="@color/light_gray"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="448dp"
+            android:fontFamily="@font/gotham_medium"/>
+
+        <EditText
+            android:id="@+id/notEkle"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="Notlar"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="501dp"
+            android:textColor="@color/light_gray"
+            android:background="@drawable/edit_text_design"
+            android:padding="8dp"
+            android:fontFamily="@font/gotham_medium"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <Button
+            android:id="@+id/iptal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="İptal"
+            android:fontFamily="@font/gotham_medium"/>
+
+        <Button
+            android:id="@+id/ekle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Ekle"
+            android:fontFamily="@font/gotham_medium"/>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

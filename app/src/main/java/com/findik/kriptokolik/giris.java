@@ -1,18 +1,10 @@
 package com.findik.kriptokolik;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.text.TextUtils;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.SearchView;
 import android.view.View;
-import android.widget.LinearLayout;
-
-
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,22 +12,32 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
+public class giris extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        setContentView(R.layout.giris_ekrani);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.activity_Giris), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        Button coin_ekle = findViewById(R.id.coin_ekle);
-        coin_ekle.setOnClickListener(new View.OnClickListener() {
+
+        Button girisButton = findViewById(R.id.button_Giris);
+        girisButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, coin_arama_ekrani.class);
+                Intent intent = new Intent(giris.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        TextView kayitText = findViewById(R.id.kayit);
+        kayitText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(giris.this, kayit.class);
                 startActivity(intent);
             }
         });

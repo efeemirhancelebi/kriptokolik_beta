@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/material_dark_gray"
+    android:id="@+id/coin_arama_ekrani">
+
+    <SearchView
+        android:id="@+id/aramaKutusu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="8dp"
+        android:background="@drawable/arama_kutusu_background"
+        android:queryHint="Arama"
+        android:iconifiedByDefault="false"/>
+
+    <ListView
+        android:id="@+id/aramaListesi"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/aramaKutusu"
+        android:backgroundTint="@color/shadow_purple"
+        />
+</RelativeLayout>

@@ -1,19 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/material_dark_gray">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/totalProfit"
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Total Portfolio Price"
+        android:fontFamily="@font/gotham_bold"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:gravity="center_horizontal"
+        android:textStyle="bold" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/coin_graphics"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/totalProfit"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/gotham_medium"
+        android:background="@color/material_dark"
+        android:gravity="center"
+        android:text="coin graphics"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+
+        <LinearLayout
+            android:id="@+id/portfolio_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/coin_graphics"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/lowestLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="210dp"
+                    android:gravity="start"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/gotham_medium"
+                    android:text="Lowest Level \n  of week"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/topLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:fontFamily="@font/gotham_medium"
+                    android:gravity="end"
+                    android:text="Top Level \n of week"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="366dp"
+            android:orientation="horizontal"
+            android:id="@+id/coin_add_section">
+
+            <Button
+                android:id="@+id/coin_ekle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/portfolio_section"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="355dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/coin_ekle"
+                android:contentDescription="Yeni coin eklemeye yarar."
+                android:tooltipText="Yeni Coin Ekle"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
