@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/material_dark_gray"
+    android:id="@+id/activity_Kayit">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="1dp">
+
+        <TextView
+            android:id="@+id/kriptokolik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/milanello"
+            android:text="Kriptokolik"
+            android:textColor="@color/white"
+            android:textSize="65dp" />
+
+        <TextView
+            android:id="@+id/kriptokolik_motto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/gotham_light_italic"
+            android:text="Bir cüzdandan daha fazlası..."
+            android:textColor="@color/twitch1"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="223dp">
+
+        <TextView
+            android:id="@+id/ad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ad"
+            tools:layout_editor_absoluteX="85dp"
+            tools:layout_editor_absoluteY="82dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/light_gray"/>
+
+        <EditText
+            android:id="@+id/tbox_ad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Adınız:"
+            tools:layout_editor_absoluteX="86dp"
+            tools:layout_editor_absoluteY="319dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/light_gray"
+            android:minHeight="48dp"/>
+
+        <TextView
+            android:id="@+id/soyad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Soyad"
+            tools:layout_editor_absoluteX="91dp"
+            tools:layout_editor_absoluteY="389dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/light_gray"/>
+
+        <EditText
+            android:id="@+id/tbox_soyad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Soyadınız:"
+            tools:layout_editor_absoluteX="84dp"
+            tools:layout_editor_absoluteY="431dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/light_gray"
+            android:minHeight="48dp"/>
+
+        <TextView
+            android:id="@+id/kullanici_adi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kullanıcı Adı"
+            tools:layout_editor_absoluteX="87dp"
+            tools:layout_editor_absoluteY="277dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/light_gray"/>
+
+        <EditText
+            android:id="@+id/tbox_kullanici_adi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Kullanıcı Adınız:"
+            tools:layout_editor_absoluteX="86dp"
+            tools:layout_editor_absoluteY="208dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/light_gray"
+            android:minHeight="48dp"/>
+
+        <TextView
+            android:id="@+id/mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-posta Adresi"
+            tools:layout_editor_absoluteX="91dp"
+            tools:layout_editor_absoluteY="171dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/light_gray"/>
+
+        <EditText
+            android:id="@+id/tbox_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:text="E-posta Adresiniz:"
+            tools:layout_editor_absoluteX="84dp"
+            tools:layout_editor_absoluteY="109dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/light_gray"
+            android:minHeight="48dp"/>
+
+        <TextView
+            android:id="@+id/sifre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Şifre"
+            tools:layout_editor_absoluteX="93dp"
+            tools:layout_editor_absoluteY="498dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/light_gray"/>
+
+        <EditText
+            android:id="@+id/tbox_sifre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:text="Şifreniz:"
+            tools:layout_editor_absoluteX="84dp"
+            tools:layout_editor_absoluteY="545dp"
+            android:textColor="@color/light_gray"
+            android:minHeight="48dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_Kayit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kayıt işlemini tamamla!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.48"
+        android:textColor="@color/purple"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

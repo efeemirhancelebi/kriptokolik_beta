@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_Giris"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/material_dark_gray">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="207dp">
+
+            <TextView
+                android:id="@+id/kriptokolik"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/milanello"
+                android:text="Kriptokolik"
+                android:textColor="@color/white"
+                android:textSize="65dp" />
+
+            <TextView
+                android:id="@+id/kriptokolik_motto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/gotham_light_italic"
+                android:text="Bir cüzdandan daha fazlası..."
+                android:textColor="@color/twitch1"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/tbox_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:text="E-mail adresiniz:"
+            android:textColor="@color/light_gray"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="318dp" />
+
+        <EditText
+            android:id="@+id/tbox_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:text="Şifreniz:"
+            android:textColor="@color/light_gray"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="363dp" />
+
+
+        <Button
+            android:id="@+id/button_Giris"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Giriş yap!"
+            android:textColor="@color/purple"
+            />
+
+        <TextView
+            android:id="@+id/kayit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/gotham_medium"
+            android:minHeight="48dp"
+            android:text="@string/text_Kayit"
+            android:textColor="@color/white"
+            tools:layout_editor_absoluteX="55dp"
+            tools:layout_editor_absoluteY="426dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/haklar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gotham_medium"
+        android:text="Kriptokolik™ Tüm Hakları Saklıdır. 2025"
+        android:textColor="@color/light_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.917"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>
