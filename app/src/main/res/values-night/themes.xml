@@ -1,7 +1,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.Kriptokolik" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.Kriptokolik" parent="Theme.Material3.DayNight.NoActionBar"></style>
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+
+    <style name="MyListTextAppearance" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
     </style>
+
 </resources>

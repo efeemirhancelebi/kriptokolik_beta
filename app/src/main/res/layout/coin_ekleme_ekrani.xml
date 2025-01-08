@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coin_ekleme_ekrani"
+    android:background="@color/material_dark_gray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/coinName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:textSize="40sp"
+            android:text="Coin Adı"
+            tools:layout_editor_absoluteX="179dp"
+            tools:layout_editor_absoluteY="94dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/gotham_bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="131dp">
+
+            <Button
+                android:id="@+id/satBtn"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/gotham_medium"
+                android:text="SAT"
+                android:textAllCaps="false"
+                android:textColor="@color/purple"
+                android:textSize="15sp"
+                tools:layout_editor_absoluteX="210dp"
+                tools:layout_editor_absoluteY="122dp" />
+
+            <Button
+                android:id="@+id/alBtn"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/gotham_medium"
+                android:text="AL"
+                android:textAllCaps="false"
+                android:textColor="@color/purple"
+                android:textSize="15sp"
+                tools:layout_editor_absoluteX="210dp"
+                tools:layout_editor_absoluteY="122dp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/miktar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/edit_text_design"
+            android:ems="10"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:padding="8dp"
+            android:text="Miktar"
+            android:textColor="@color/light_gray"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="448dp"
+            android:fontFamily="@font/gotham_medium"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <Button
+            android:id="@+id/iptal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="İptal"
+            android:fontFamily="@font/gotham_medium"
+            android:textColor="@color/purple"/>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

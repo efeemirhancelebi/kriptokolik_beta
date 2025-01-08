@@ -1,19 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/material_dark_gray">
 
+    <!-- Topta portföy değeri yazılacak TextView -->
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/totalProfit"
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Total Portfolio Price"
+        android:fontFamily="@font/gotham_bold"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:gravity="center_horizontal"
+        android:textStyle="bold" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Coin grafik alanı (GraphView) -->
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/coin_graphics"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/totalProfit"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/gotham_medium"
+        android:background="@color/material_dark"
+        android:gravity="center"
+        android:text="coin graphics"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+    <!-- Başlık satırı: Coin / Total / Amount / Price -->
+    <LinearLayout
+        android:id="@+id/header_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/coin_graphics"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="@color/material_dark">
+
+        <TextView
+            android:id="@+id/header_coin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Coin"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/header_total"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Total"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/header_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Amount"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/header_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Price"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <!-- Portfolio Section + ListView -->
+    <LinearLayout
+        android:id="@+id/portfolio_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_section"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <!-- Özel row_coin.xml tasarımıyla doldurulacak ListView -->
+        <ListView
+            android:id="@+id/coinListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="1dp"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <!-- Coin ekleme butonu alt tarafta -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/coin_add_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="366dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/coin_ekle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="355dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/coin_ekle"
+                android:backgroundTint="#6441A5"
+                android:contentDescription="Yeni coin eklemeye yarar."
+                android:tooltipText="Yeni Coin Ekle" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

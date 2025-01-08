@@ -1,5 +1,5 @@
 plugins {
-    alias(libs.plugins.android.application)
+    id("com.android.application")
 }
 
 android {
@@ -33,11 +33,22 @@ android {
 
 dependencies {
 
+    implementation("com.jjoe64:graphview:4.2.2")
+    implementation ("androidx.sqlite:sqlite:2.1.0")
+    implementation ("androidx.core:core:1.13.0")
+    implementation ("androidx.media:media:1.0.0")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation(libs.legacy.support.v4)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation("com.google.code.gson:gson:2.10")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.okhttp3:okhttp:4.9.3")
+    implementation("com.android.volley:volley:1.2.1")
+
 }

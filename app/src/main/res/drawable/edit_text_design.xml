@@ -1,0 +1,21 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Arka Plan Rengi -->
+    <solid android:color="@color/material_dark_gray2"/> <!-- Altın Sarısı -->
+
+    <!-- Kenar Çizgisi Rengi ve Kalınlığı -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/material_dark_gray"/>
+
+    <!-- Köşe Yumuşatma (Radius) -->
+    <corners android:radius="8dp"/>
+
+    <!-- İç Kenar Boşlukları (Padding) -->
+    <padding
+        android:left="10dp"
+        android:top="10dp"
+        android:right="10dp"
+        android:bottom="10dp"/>
+</shape>
